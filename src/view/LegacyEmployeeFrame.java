@@ -27,6 +27,19 @@ public class LegacyEmployeeFrame extends JFrame {
         showLoginView();
     }
 
+    public LegacyEmployeeFrame(boolean dashboardOnly) {
+        setTitle("Legacy Employee Management - Dashboard");
+        setSize(900, 550);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        if (dashboardOnly) {
+            showMainView();
+        } else {
+            showLoginView();
+        }
+    }
+
     private Connection connect() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -389,3 +402,4 @@ public class LegacyEmployeeFrame extends JFrame {
         employeeTable.clearSelection();
     }
 }
+

@@ -1,7 +1,7 @@
-import view.LegacyEmployeeFrame;
+import view.LoginFrame;
 
 public class Main {
     public static void main(String[] args) {
-        new LegacyEmployeeFrame().setVisible(true);
+        new LoginFrame().setVisible(true);
     }
 }
