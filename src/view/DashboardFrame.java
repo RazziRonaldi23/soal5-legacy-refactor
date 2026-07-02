@@ -72,7 +72,7 @@ public class DashboardFrame extends JFrame {
     }
 
     private void openMasterData() {
-        new LegacyEmployeeFrame(true).setVisible(true);
+        new EmployeeFrame().setVisible(true);
     }
 
     private void logout() {
