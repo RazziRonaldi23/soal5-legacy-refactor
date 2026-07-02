@@ -48,7 +48,7 @@ public class LoginFrame extends JFrame {
             if (user != null) {
                 JOptionPane.showMessageDialog(this, "Login berhasil.");
                 dispose();
-                new LegacyEmployeeFrame(true).setVisible(true);
+                new DashboardFrame().setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Username atau password salah.");
             }
