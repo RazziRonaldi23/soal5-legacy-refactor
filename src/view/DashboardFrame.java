@@ -37,14 +37,16 @@ public class DashboardFrame extends JFrame {
         statisticPanel.add(totalEmployeeLabel);
         statisticPanel.add(totalSalaryLabel);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 3, 10, 10));
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 10));
 
         JButton refreshButton = new JButton("Refresh");
         JButton masterButton = new JButton("Master Data");
+        JButton reportButton = new JButton("Laporan");
         JButton logoutButton = new JButton("Logout");
 
         buttonPanel.add(refreshButton);
         buttonPanel.add(masterButton);
+        buttonPanel.add(reportButton);
         buttonPanel.add(logoutButton);
 
         mainPanel.add(titleLabel, BorderLayout.NORTH);
@@ -55,6 +57,7 @@ public class DashboardFrame extends JFrame {
 
         refreshButton.addActionListener(event -> loadDashboard());
         masterButton.addActionListener(event -> openMasterData());
+        reportButton.addActionListener(event -> openReport());
         logoutButton.addActionListener(event -> logout());
 
         loadDashboard();
@@ -73,6 +76,10 @@ public class DashboardFrame extends JFrame {
 
     private void openMasterData() {
         new EmployeeFrame().setVisible(true);
+    }
+
+    private void openReport() {
+        new ReportFrame().setVisible(true);
     }
 
     private void logout() {
